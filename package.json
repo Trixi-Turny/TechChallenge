@@ -1,0 +1,23 @@
+{
+  "name": "tech_challenge",
+  "version": "1.0.0",
+  "description": "tech_challenge for haplo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trixi-Turny/TechChallenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Trixi-Turny/TechChallenge/issues"
+  },
+  "homepage": "https://github.com/Trixi-Turny/TechChallenge#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "formidable": "^1.0.17"
+  }
+}
