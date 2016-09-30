@@ -31,5 +31,8 @@ $(document).ready(function() {
     $(element).siblings('textarea').css({
       "visibility": "hidden"
     });
+    $(element).css({
+      "visibility": "hidden"
+    });
   }
 });
