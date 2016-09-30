@@ -4,6 +4,7 @@ $(document).ready(function() {
   listenForSubmit();
   makeCenterStory();
   var stories = {};
+  var storyBook = [];
 
   function listenForSubmit() {
     var textBoxContents = {};
@@ -40,6 +41,10 @@ $(document).ready(function() {
   function makeCenterStory() {
     $('.storylink').click(function(i, element) {
       event.preventDefault();
+      $('.storyLink').each(function(v, element) {
+        stories[i] = $(this).text();
+        storyBook.push(stories[i])
+      });
       var newStory = document.createElement('p');
       $(newStory).attr({
         "class": "centerStory"
@@ -47,6 +52,8 @@ $(document).ready(function() {
       $('.centerStory').replaceWith(newStory);
       $(newStory).html($(this).text());
       resetElements();
+      console.log(stories);;
+      console.log(storyBook);
     });
 
     function resetElements() {
