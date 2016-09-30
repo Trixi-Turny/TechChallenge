@@ -46,6 +46,20 @@ $(document).ready(function() {
       });
       $('.centerStory').replaceWith(newStory);
       $(newStory).html($(this).text());
+      resetElements();
     });
+
+    function resetElements() {
+      $('.textarea').each(function(i, element) {;
+        $(this).val("");
+        $(this).css({
+          "visibility": "visible"
+        });
+        $(this).siblings('input').css({
+          "visibility": "visible"
+        });
+        $(this).siblings('a').text("");
+      });
+    }
   }
 });
