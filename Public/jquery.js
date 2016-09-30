@@ -2,7 +2,8 @@ $(document).ready(function() {
 
 
   listenForSubmit();
-  var aggregateValues = {};
+  makeCenterStory();
+  var stories = {};
 
   function listenForSubmit() {
     var textBoxContents = {};
@@ -17,12 +18,12 @@ $(document).ready(function() {
     // aggregateValues.push(textBoxContents);
     console.log(textBoxContents);
   }
-  console.log(aggregateValues);
 
   function makeLink(element, value) {
     var element = element;
     console.log(element);
     $(element).prev('a').text(value);
+    console.log($(element).prev('.storylink').text(value));
     hideBox(element);
   }
 
@@ -33,6 +34,18 @@ $(document).ready(function() {
     });
     $(element).css({
       "visibility": "hidden"
+    });
+  }
+
+  function makeCenterStory() {
+    $('.storylink').click(function(i, element) {
+      event.preventDefault();
+      var newStory = document.createElement('p');
+      $(newStory).attr({
+        "class": "centerStory"
+      });
+      $('.centerStory').replaceWith(newStory);
+      $(newStory).html($(this).text());
     });
   }
 });
