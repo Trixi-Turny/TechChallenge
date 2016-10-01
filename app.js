@@ -7,13 +7,12 @@ var bodyParser = require('body-parser');
 var expressHbs = require('express-handlebars');
 
 var routes = require('./routes/index');
-
-
 var app = express();
 
 // view engine setup
 app.engine('.hbs', expressHbs({
   defaultLayout: 'layout',
+  layoutsDir: __dirname + '/views/layouts/',
   extname: '.hbs'
 }));
 app.set('view engine', '.hbs');
@@ -25,6 +24,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 

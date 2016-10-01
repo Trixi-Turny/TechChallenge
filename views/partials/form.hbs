@@ -7,9 +7,13 @@
                     <th class="form_table_head"></th>
                     <th class="form_table_head">
                         <fieldset>
-                            <textarea class = "textarea"  placeholder= "hi"></textarea>
-                            <a class="storyLink" href=""></a>
-                            <input type="submit" value="Submit">
+                            <textarea class = "textarea" name= "textarea1">{{textBoxValue0}}</textarea>
+                            {{#if textBoxValue}}
+
+                             <a class="storyLink" href="">{{storyLine}}</a>
+
+                             {{/if}}
+                            <input type="submit" value="Submit" id = "submit0">
 
                         </fieldset>
                     </th>
@@ -18,18 +22,18 @@
                 <tr class="form_table_row">
                     <th class="form_table_head">
                         <fieldset>
-                            <textarea class = "textarea"></textarea>
-                            <a class="storyLink" href=""></a>
-                            <input type="submit" value="Submit">
+                            <textarea class = "textarea" name = "textarea2">{{textBoxValue1}}</textarea>
+                            <a class="storyLink" href="">{{storyLine}}</a>
+                            <input type="submit" value="Submit" >
                         </fieldset>
                     </th>
                     <th class="form_table_head">
-                        <p class="centerStory storyLink">Once upon a time, there was a big bad wolf.</p>
+                        <p class="centerStory storyLink">{{centerStory}}</p>
                     </th>
                     <th class="form_table_head">
                         <fieldset>
-                            <textarea class = "textarea"></textarea>
-                            <a class="storyLink" href=""></a>
+                            <textarea class = "textarea">{{textBoxValue2}}</textarea>
+                            <a class="storyLink" href="">{{storyLine}}</a>
                             <input type="submit" value="Submit">
                         </fieldset>
                     </th>
@@ -38,8 +42,8 @@
                     <th class="form_table_head"></th>
                     <th class="form_table_head">
                         <fieldset>
-                            <textarea class = "textarea"></textarea>
-                            <a class="storyLink" href=""></a>
+                            <textarea class = "textarea">{{textBoxValue3}}</textarea>
+                            <a class="storyLink" href="">{{storyLine}}</a>
                             <input type="submit" value="Submit">
                         </fieldset>
                     </th>
