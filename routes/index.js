@@ -31,12 +31,19 @@ router.post('/', function(req, res, next) {
   })
 });
 
+
+app.post('/#', function(req, res, next) {
+
+  console.log("the link was clicked");
+
+});
+
+
 function checkIfNull0(req) {
   if (req.body.storyLine0) {
     storyLine0 = req.body.storyLine0;
   } else if (req.body.textarea0) {
     storyLine0 = req.body.textarea0;
-    console.log("it had things init");
   }
   return storyLine0
 }
@@ -64,9 +71,10 @@ function checkIfNull3(req) {
     storyLine3 = req.body.storyLine3;
   } else if (req.body.textarea3) {
     storyLine3 = req.body.textarea3;
-    console.log("it had things init");
   }
   return storyLine3
 }
+
+
 
 module.exports = router

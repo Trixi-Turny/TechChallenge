@@ -1,0 +1,63 @@
+h1.Multi-Path Story App
+
+h3.{font-size:0.8em, color: C1B6B3}Documentation
+
+
+
+h5.Setup
+
+p.The appliaction requires the following items to be installed:
+
+*Node.js ":https://nodejs.org/en/download/"
+
+p.The next steps:
+
+*Save the Multi--Path--Story App in a folder
+
+*In your terminal navigate to the folder and use %{font-family:courier-new}npm install% to install all node packages.
+
+*Write %{font-family:courier-new}npm start% to start the application
+
+*Open your browser and navigate to this url: "http://locahost:3000" and the application interface should load.
+
+
+
+h5.The Approach
+
+p.The approach chosen for this application has begun with an extensive research into Node.js. Many tutorials have been browsed through and a great deal of knowledge has been gathered.
+
+p.In order to ensure that the basic working of the application has been well understood most of the code was written in client-side Jquery first.
+Once the workings of the code and the logic was deemed to be sound, the following steps were taken to re-factor the application into a Server Side App:
+
+*Re-Stucturing the file system
+*Removing all Client--Side Java Script
+*installing required npm Modules
+*Re-writing the app.js file to request a server and load a view with express.js
+*Re-searching further into the various types of request and response methods.
+
+h6.Shortcuts and Implications
+
+p.Many shortcuts have been made for the following reasons:
+
+*The right information took too long to find/wasn't available
+*The online courses were mostly useful, but often the required piece of information was not included, sometimes the wrong path was followed, which later on caused the code to break.
+*Was faced with the challenge of thinking in a Server--Side way, with experience mainly consisting of Cient-Side Javascript
+
+p.The above reasons and shortcuts have had the following implications on the Application:
+
+*The app is not performing to the required standards
+*The app is running, but not fully functioning
+*The code is not organised in a scalable way and is amateurly written.
+
+h6.The testing of Skills
+
+p.The application aimed to test the following skills:
+
+*Attention to detail in designing and implementing the application
+*The understanding of the required folder structure and required packages and how these are connected and used
+*The understanding of Server Side Javascript
+*The knowledge of callback functions and when/how to use them
+*The 'user--friendly' mindset in accounting for errors and writing error messages
+
+
+p.This application has provided a great learning opportunity.
