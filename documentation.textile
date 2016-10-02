@@ -35,7 +35,7 @@ Once the workings of the code and the logic was deemed to be sound, the followin
 *Re-writing the app.js file to request a server and load a view with express.js
 *Re-searching further into the various types of request and response methods.
 
-h6.Shortcuts and Implications
+h5.Shortcuts and Implications
 
 p.Many shortcuts have been made for the following reasons:
 
@@ -49,7 +49,7 @@ p.The above reasons and shortcuts have had the following implications on the App
 *The app is running, but not fully functioning
 *The code is not organised in a scalable way and is amateurly written.
 
-h6.The testing of Skills
+h5.The testing of Skills
 
 p.The application aimed to test the following skills:
 
