@@ -32,10 +32,8 @@ router.post('/', function(req, res, next) {
 });
 
 
-app.post('/#', function(req, res, next) {
-
+app.post('/', function(req, res, next) {
   console.log("the link was clicked");
-
 });
 
 
