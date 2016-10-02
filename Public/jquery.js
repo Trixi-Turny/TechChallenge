@@ -24,7 +24,7 @@ $(document).ready(function() {
     var element = element;
     console.log(element);
     $(element).prev('a').text(value);
-    console.log($(element).prev('.storylink').text(value));
+    // console.log($(element).prev('.storylink').text(value));
     hideBox(element);
   }
 
@@ -39,34 +39,37 @@ $(document).ready(function() {
   }
 
   function makeCenterStory() {
+
     $('.storylink').click(function(i, element) {
       event.preventDefault();
+      console.log("makin it");
       $('.storyLink').each(function(v, element) {
-        stories[i] = $(this).text();
+        stories[i] = element[v].text();
+        console.log(stories[i])
         storyBook.push(stories[i])
+
       });
       var newStory = document.createElement('p');
       $(newStory).attr({
-        "class": "centerStory"
+        "id": "centerStory"
       });
-      $('.centerStory').replaceWith(newStory);
+      $('#centerStory').replaceWith(newStory);
       $(newStory).html($(this).text());
       resetElements();
-      console.log(stories);;
-      console.log(storyBook);
     });
-
-    function resetElements() {
-      $('.textarea').each(function(i, element) {;
-        $(this).val("");
-        $(this).css({
-          "visibility": "visible"
-        });
-        $(this).siblings('input').css({
-          "visibility": "visible"
-        });
-        $(this).siblings('a').text("");
-      });
-    }
   }
+
+  function resetElements() {
+    $('.textarea').each(function(i, element) {
+      $(this).val("");
+      $(this).css({
+        "visibility": "visible"
+      });
+      $(this).siblings('input').css({
+        "visibility": "visible"
+      });
+      $(this).siblings('a').text("");
+    });
+  }
+
 });
