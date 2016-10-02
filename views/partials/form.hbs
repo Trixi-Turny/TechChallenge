@@ -2,55 +2,66 @@
 
 
 <a href="#">Back to the start</a>
-        <form id = "dynamicForm" action="/" method="post">
+
             <table id="form_table">
                 <tr class="form_table_row">
                     <th class="form_table_head"></th>
                     <th class="form_table_head">
+                    <form id = "dynamicForm" action="/" method="post">
                         <fieldset>
-                            <textarea class = "textarea" name= "textarea1">{{textBoxValue0}}</textarea>
-                            {{#if textBoxValue}}
+                            <textarea class = "textarea" name= "textarea0">{{textBoxValue}}</textarea>
 
-                             <a class="storyLink" href="">{{storyLine}}</a>
+                             <a class="storyLink" href="">{{storyLine0}}</a>
 
-                             {{/if}}
-                            <input type="submit" value="Submit" id = "submit0">
+                            <input type="submit" value="Submit" id = "submit">
 
                         </fieldset>
+                        </form>
                     </th>
                     <th class="form_table_head"></th>
                 </tr>
-                <tr class="form_table_row">
-                    <th class="form_table_head">
+
+                    <tr class="form_table_row">
+                      <th class="form_table_head">
+                      <form id = "dynamicForm" action="/" method="post">
                         <fieldset>
-                            <textarea class = "textarea" name = "textarea2">{{textBoxValue1}}</textarea>
-                            <a class="storyLink" href="">{{storyLine}}</a>
+                            <textarea class = "textarea" name = "textarea1">{{textBoxValue}}</textarea>
+                            <a class="storyLink" href="">{{storyLine1}}</a>
                             <input type="submit" value="Submit" >
                         </fieldset>
+                        </form>
                     </th>
                     <th class="form_table_head">
                         <p class="centerStory storyLink">{{centerStory}}</p>
                     </th>
-                    <th class="form_table_head">
+
+                     <th class="form_table_head">
+                     <form id = "dynamicForm" action="/" method="post">
                         <fieldset>
-                            <textarea class = "textarea">{{textBoxValue2}}</textarea>
-                            <a class="storyLink" href="">{{storyLine}}</a>
+                            <textarea class = "textarea" name = "textarea2">{{textBoxValue}}</textarea>
+                            <a class="storyLink" href="">{{storyLine2}}</a>
                             <input type="submit" value="Submit">
                         </fieldset>
+                        </form>
                     </th>
                 </tr>
+
+
                 <tr class="form_table_row">
                     <th class="form_table_head"></th>
                     <th class="form_table_head">
+
+                    <form id = "dynamicForm" action="/" method="post">
                         <fieldset>
-                            <textarea class = "textarea">{{textBoxValue3}}</textarea>
-                            <a class="storyLink" href="">{{storyLine}}</a>
+                            <textarea class = "textarea" name = "textarea3">{{textBoxValue}}</textarea>
+                            <a name = "simon" class="storyLink" href="">{{storyLine3}}</a>
                             <input type="submit" value="Submit">
                         </fieldset>
+                        </form>
                     </th>
                     <th class="form_table_head"></th>
                 </tr>
             </table>
-        </form>
+
 
 

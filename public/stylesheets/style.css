@@ -1,8 +1,18 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+tr.form_table_row {
+  border: 2px solid #000000;
 }
 
-a {
-  color: #00B7FF;
+th.form_table_head{
+  border: 2px solid #000000;
+  width: 30%;
+}
+
+table{
+width: 50%;
+height: 40%;
+  }
+
+fieldset{
+border: none;
 }
