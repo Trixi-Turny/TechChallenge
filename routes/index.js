@@ -1,23 +1,24 @@
-var express = require('express');
-var router = express.Router();
-var partial = require('express-partial');
-var app = express();
+var express = require('express')
+var router = express.Router()
+var partial = require('express-partial')
+var app = express()
+var $ = null
 
-app.use(partial());
+var request = require('request')
+var cheerio = require('cheerio')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res, body) {
+  $ = cheerio.load(body)
   res.render('index', {
     title: 'Tech Challenge',
     centerStory: "Once upon a time, there was a big bad wolf."
-  });
-  router.post('/', function(req, res, next) {
-    var story = req.body.textBoxValue0
-    console.log(story);
-    res.render('index', {
-      centerStory: "Hi Gorgeous Girl",
-      title: "Something is working"
-    });
-  });
-});
-module.exports = router;
+  })
+})
+
+/* POST */
+router.post('/', function(req, res, next) {
+  console.log(req.body.textarea1)
+})
+
+module.exports = router
