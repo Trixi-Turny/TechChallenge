@@ -14,14 +14,22 @@ var storyLine3;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', {
-      title: 'Tech Challenge',
-      centerStory: defaultCenter
-        // storyLine: defaultContent
-    });
-  })
-  /* POST */
+  res.render('index', {
+    title: 'Tech Challenge',
+    centerStory: defaultCenter
+      // storyLine: defaultContent
+  });
+})
+
+/* POST */
 router.post('/', function(req, res, next) {
+
+  // storyLine0 = checkIfNull0(req)
+  // storyLine1 = checkIfNull1(req)
+  // storyLine2 = checkIfNull2(req)
+  // storyLine3 = checkIfNull3(req)
+
+
   res.render('index', {
     storyLine0: checkIfNull0(req),
     storyLine1: checkIfNull1(req),
@@ -29,23 +37,30 @@ router.post('/', function(req, res, next) {
     storyLine3: checkIfNull3(req),
     centerStory: defaultCenter
   })
+
 });
 
 
 router.get('/:id', function(req, res, next) {
   var index = req.params.id;
-
-
+  if (index == 0) {
+    defaultCenter = storyLine0;
+  } else if (index == 1) {
+    defaultCenter = storyLine1;
+  } else if (index == 2) {
+    defaultCenter = storyLine2;
+  } else {
+    defaultCenter = storyLine3;
+  }
   res.render('index', {
-    centerStory: storyLine0,
+    centerStory: defaultCenter,
     storyLine0: "",
     storyLine1: "",
     storyLine2: "",
     storyLine3: ""
-  });
-  console.log("the link was clicked");
-  console.log(req.body.data);
-});
+  })
+})
+
 
 
 function checkIfNull0(req) {
@@ -84,32 +99,6 @@ function checkIfNull3(req) {
   return storyLine3
 }
 
-
-function makeCenterStory(req, index) {
-  var index = index;
-  switch (index) {
-    case 0:
-
-      defaultCenter = storyLine0;
-
-      return defaultCenter
-      break
-
-    case 1:
-      defaultCenter = storyLine1;
-      return defaultCenter
-      break
-    case 2:
-      defaultContent = storyLine2;
-      return defaultCenter
-      break
-
-    case 3:
-      defaultCenter = storyLine3;
-      return defaultCenter
-    default:
-  }
-}
 
 
 module.exports = router
