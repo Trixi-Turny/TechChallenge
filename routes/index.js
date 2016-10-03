@@ -125,42 +125,6 @@ router.get('/:id', function(req, res, next) {
   });
 })
 
-function checkIfNull0(req) {
-  if (req.body.storyLine0) {
-    storyLine0 = req.body.storyLine0;
-  } else if (req.body.textarea0) {
-    storyLine0 = req.body.textarea0;
-  }
-  return storyLine0
-}
-
-function checkIfNull1(req) {
-  if (req.body.storyLine1) {
-    storyLine1 = req.body.storyLine1;
-  } else if (req.body.textarea1) {
-    storyLine1 = req.body.textarea1;
-  }
-  return storyLine1
-}
-
-function checkIfNull2(req) {
-  if (req.body.storyLine2) {
-    storyLine2 = req.body.storyLine2;
-  } else if (req.body.textarea2) {
-    storyLine2 = req.body.textarea2;
-  }
-  return storyLine2
-}
-
-function checkIfNull3(req) {
-  if (req.body.storyLine3) {
-    storyLine3 = req.body.storyLine3;
-  } else if (req.body.textarea3) {
-    storyLine3 = req.body.textarea3;
-  }
-  return storyLine3
-}
-
 
 
 module.exports = router
