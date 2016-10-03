@@ -110,19 +110,19 @@ router.get('/:id', function(req, res, next) {
     centerStory: defaultCenter
   });
 
-  router.post('/', function(req, res, next) {
-    if (req.body.centerStory != "Once upon a time, there was a big bad wolf.") {
-      var empty = false
-      req.body.storyLine0.empty()
-      res.render('index', {
-        centerStory: defaultCenter,
-        storyLine0: empty,
-        storyLine1: empty,
-        storyLine2: empty,
-        storyLine3: empty
-      })
-    }
-  });
+  // router.post('/', function(req, res, next) {
+  //   if (req.body.centerStory != "Once upon a time, there was a big bad wolf.") {
+  //     var empty = false
+  //     req.body.storyLine0.empty()
+  //     res.render('index', {
+  //       centerStory: defaultCenter,
+  //       storyLine0: empty,
+  //       storyLine1: empty,
+  //       storyLine2: empty,
+  //       storyLine3: empty
+  //     })
+  //   }
+  // });
 })
 
 
