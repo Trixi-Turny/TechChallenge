@@ -32,8 +32,19 @@ router.post('/', function(req, res, next) {
 });
 
 
-app.post('/', function(req, res, next) {
+router.get('/:id', function(req, res, next) {
+  var index = req.params.id;
+
+
+  res.render('index', {
+    centerStory: storyLine0,
+    storyLine0: "",
+    storyLine1: "",
+    storyLine2: "",
+    storyLine3: ""
+  });
   console.log("the link was clicked");
+  console.log(req.body.data);
 });
 
 
@@ -73,6 +84,32 @@ function checkIfNull3(req) {
   return storyLine3
 }
 
+
+function makeCenterStory(req, index) {
+  var index = index;
+  switch (index) {
+    case 0:
+
+      defaultCenter = storyLine0;
+
+      return defaultCenter
+      break
+
+    case 1:
+      defaultCenter = storyLine1;
+      return defaultCenter
+      break
+    case 2:
+      defaultContent = storyLine2;
+      return defaultCenter
+      break
+
+    case 3:
+      defaultCenter = storyLine3;
+      return defaultCenter
+    default:
+  }
+}
 
 
 module.exports = router
