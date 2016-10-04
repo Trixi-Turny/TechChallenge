@@ -95,7 +95,7 @@ router.post('/', function(req, res, next) {
 var counter = 0;
 router.get('/:id', function(req, res, next) {
   storyBook[counter] = stories;
-  stories = [];
+
   var index = req.params.id;
   if (index == 0) {
     // root.up(n1.index);
@@ -115,7 +115,7 @@ router.get('/:id', function(req, res, next) {
       n1.storyLine = storyBook[0].storyLine1;
     }
     res.render('index', {
-      storyLine0: "Trixi"
+      storyLine0: stories[0].storyLine1
     });
 
   }
