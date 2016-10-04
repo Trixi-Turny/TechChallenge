@@ -110,12 +110,16 @@ router.get('/:id', function(req, res, next) {
     defaultCenter = n4.storyLine;
     // root.up(n4.index)
   } else if (index == "start") {
-    for (var n = 0; n < storyBook.length; n++) {
-      var idx = n.toString();
-      n1.storyLine = storyBook[0].storyLine1;
-    }
+    // for (var n = 0; n < storyBook.length; n++) {
+    //   var idx = n.toString();
+    //   n1.storyLine = storyBook[0].storyLine1;
+    // }
     res.render('index', {
-      storyLine0: stories[0].storyLine1
+      storyLine0: stories[0].storyLine1,
+      storyLine1: stories[1].storyLine2,
+      storyLine2: stories[2].storyLine3,
+      storyLine3: stories[3].storyLine4,
+      centerStory: defaultCenter
     });
 
   }
