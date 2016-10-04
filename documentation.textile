@@ -37,17 +37,16 @@ Once the workings of the code and the logic was deemed to be sound, the followin
 
 h5.Shortcuts and Implications
 
-p.Many shortcuts have been made for the following reasons:
+p.Some shortcuts have been made for the following reasons:
 
 *The right information took too long to find/wasn't available
 *The online courses were mostly useful, but often the required piece of information was not included, sometimes the wrong path was followed, which later on caused the code to break.
-*Was faced with the challenge of thinking in a Server--Side way, with experience mainly consisting of Cient-Side Javascript
+*Was faced with the challenge of thinking in a Server--Side way, with experience mainly consisting of Cient-Side Javascript.
 
 p.The above reasons and shortcuts have had the following implications on the Application:
 
-*The app is not performing to the required standards
-*The app is running, but not fully functioning
-*The code is not organised in a scalable way and is amateurly written.
+*The app is running, but not all functionalities are implemented, Only the first part of the story is loaded on the start. The logic around looping through the rest of the data has not been added.
+*The code could be more organised and more scaleable.
 
 h5.The testing of Skills
 
@@ -58,6 +57,5 @@ p.The application aimed to test the following skills:
 *The understanding of Server Side Javascript
 *The knowledge of callback functions and when/how to use them
 *The 'user--friendly' mindset in accounting for errors and writing error messages
+*Understanding the logic and simplicity of get/Post Requests
 
-
-p.This application has provided a great learning opportunity.
