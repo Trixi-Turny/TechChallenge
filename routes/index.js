@@ -6,7 +6,8 @@ var request = require('request')
 var Node = require("tree-node")
 var index = 0;
 var stories = [];
-var storyBook = {};
+var centerStories = [];
+var storyBook = [];
 var storyStarter = "Once upon a time, there was a big bad wolf."
 var defaultCenter = storyStarter
 var storyLine0;
@@ -25,7 +26,6 @@ center.appendChild(n1)
 center.appendChild(n2)
 center.appendChild(n3)
 center.appendChild(n4)
-
 
 center.data({
   centerStory: ""
@@ -47,12 +47,14 @@ n4.data({
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('index', {
-      title: 'Tech Challenge',
+      title: 'Trixi Turny - Tech Challenge',
       centerStory: storyStarter
         // storyLine: defaultContent
     });
   })
   /* POST */
+
+var helper = 0;
 router.post('/', function(req, res, next) {
   for (var i = 0; i < Node.length; i++) {
 
@@ -85,57 +87,79 @@ router.post('/', function(req, res, next) {
       storyLine1: n2.storyLine,
       storyLine2: n3.storyLine,
       storyLine3: n4.storyLine,
-      centerStory: defaultCenter
+      centerStory: defaultCenter,
+      title: 'Trixi Turny - Tech Challenge',
     })
   }
-  console.log(stories);
+  helper = helper + 1;
 });
 
 
-var counter = 0;
-router.get('/:id', function(req, res, next) {
-  storyBook[counter] = stories;
+var storyCounter = 0;
 
+var counter = 0;
+centerStories.push(storyStarter);
+
+router.get('/:id', function(req, res, next) {
+  // storyBook[counter] = stories;
+  storyBook.push(stories)
   var index = req.params.id;
   if (index == 0) {
     // root.up(n1.index);
     defaultCenter = n1.storyLine;
+    centerStories.push(defaultCenter);
+    n1.storyLine = "";
+    n2.storyLine = "";
+    n3.storyLine = "";
+    n4.storyLine = "";
   } else if (index == 1) {
     defaultCenter = n2.storyLine;
+    centerStories.push(defaultCenter);
+    n1.storyLine = "";
+    n2.storyLine = "";
+    n3.storyLine = "";
+    n4.storyLine = "";
     // root.up(n2.index);
   } else if (index == 2) {
     defaultCenter = n3.storyLine;
+    centerStories.push(defaultCenter);
+    n1.storyLine = "";
+    n2.storyLine = "";
+    n3.storyLine = "";
+    n4.storyLine = "";
     // root.up(n3.index)
   } else if (index == 3) {
     defaultCenter = n4.storyLine;
+    centerStories.push(defaultCenter);
+    n1.storyLine = "";
+    n2.storyLine = "";
+    n3.storyLine = "";
+    n4.storyLine = "";
     // root.up(n4.index)
   } else if (index == "start") {
-    // for (var n = 0; n < storyBook.length; n++) {
-    //   var idx = n.toString();
-    //   n1.storyLine = storyBook[0].storyLine1;
-    // }
-    res.render('index', {
-      storyLine0: stories[0].storyLine1,
-      storyLine1: stories[1].storyLine2,
-      storyLine2: stories[2].storyLine3,
-      storyLine3: stories[3].storyLine4,
-      centerStory: defaultCenter
-    });
-
+    console.log(stories);
+    n1.storyLine = storyBook[storyCounter][storyCounter].storyLine1
+    n2.storyLine = storyBook[storyCounter][storyCounter + 1].storyLine2
+    n3.storyLine = storyBook[storyCounter][storyCounter + 2].storyLine3
+    n4.storyLine = storyBook[storyCounter][storyCounter + 3].storyLine4
+    defaultCenter = centerStories[storyCounter];
+    storyCounter = storyCounter + 1;
   }
-  counter = counter + 1;
-  n1.storyLine = "";
-  n2.storyLine = "";
-  n3.storyLine = "";
-  n4.storyLine = "";
+  console.log(centerStories);
+  console.log(stories);
+
+
   res.render('index', {
     storyLine0: n1.storyLine,
     storyLine1: n2.storyLine,
     storyLine2: n3.storyLine,
     storyLine3: n4.storyLine,
-    centerStory: defaultCenter
+    centerStory: defaultCenter,
+    title: 'Trixi Turny - Tech Challenge'
   });
-  console.log(storyBook);
+
+  console.log(storyBook[storyCounter][storyCounter].storyLine1);
+  counter = counter + 1;
 
 });
 
