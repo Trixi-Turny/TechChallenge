@@ -34,19 +34,19 @@ Once the workings of the code and the logic was deemed to be sound, the followin
 *installing required npm Modules
 *Re-writing the app.js file to request a server and load a view with express.js
 *Re-searching further into the various types of request and response methods.
+*Research into Tree Structures and the logic around them
 
 h5.Shortcuts and Implications
 
 p.Some shortcuts have been made for the following reasons:
 
 *The right information took too long to find/wasn't available
-*The online courses were mostly useful, but often the required piece of information was not included, sometimes the wrong path was followed, which later on caused the code to break.
+*The online courses were mostly useful, but often the required piece of information was not included, sometimes the wrong path was followed, which later on caused errors not easily recognised.
 *Was faced with the challenge of thinking in a Server--Side way, with experience mainly consisting of Cient-Side Javascript.
 
 p.The above reasons and shortcuts have had the following implications on the Application:
 
-*The app is running, but not all functionalities are implemented, Only the first part of the story is loaded on the start. The logic around looping through the rest of the data has not been added.
-*The code could be more organised and more scaleable.
+*The app is running and functional, but the time to implement the solution had to be extended.
 
 h5.The testing of Skills
 
@@ -58,4 +58,5 @@ p.The application aimed to test the following skills:
 *The knowledge of callback functions and when/how to use them
 *The 'user--friendly' mindset in accounting for errors and writing error messages
 *Understanding the logic and simplicity of get/Post Requests
+*Understanding Tree Structures and URL manipulation/mapping
 
