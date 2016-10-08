@@ -1,0 +1,10 @@
+<form id = "dynamicForm" action="{{endpoint}}"  method="post">
+   <fieldset>
+   {{#if currentNode.nodes.[0] }}
+     <a class="storyLink" href="{{endpoint}}/0">{{currentNode.nodes.[0].storyLine}}</a>
+   {{else}}
+     <textarea class = "textarea" name= "0"></textarea>
+     <input type="submit" value="Submit" id = "submit">
+   {{/if}}
+   </fieldset>
+</form>

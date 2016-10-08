@@ -46,9 +46,6 @@ router.get('*', function(req, res, next) {
     endpoint: req.url.replace(/\/$/, ''),
     currentNode: currentNode
   });
-  // endpoint: req.url.replace(/\/$/, ''),
-  // currentNode: currentNode
-
 });
 
 router.post('*', function(req, res) {
