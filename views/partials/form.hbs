@@ -3,20 +3,29 @@
 
 <a href="/">Back to the start</a>
 
+
+
             <table id="form_table">
                 <tr class="form_table_row">
                     <th class="form_table_head"></th>
                     <th class="form_table_head">
-                    <form id = "dynamicForm" action="{{endpoint}}" method="post">
+
+
+                    <form id = "dynamicForm" action="{{endpoint}}"  method="post">
+
                         <fieldset>
+
                         {{#if currentNode.nodes.[0] }}
                             <a class="storyLink" href="{{endpoint}}/0">{{currentNode.nodes.[0].storyLine}}</a>
                         {{else}}
-                            <textarea class = "textarea" name= "textarea0"></textarea>
+                            <textarea class = "textarea" name= "0"></textarea>
                             <input type="submit" value="Submit" id = "submit">
                         {{/if}}
+
                         </fieldset>
                         </form>
+
+
                     </th>
                     <th class="form_table_head"></th>
                 </tr>
@@ -27,7 +36,7 @@
                         {{#if currentNode.nodes.[1] }}
                             <a class="storyLink" href="{{endpoint}}/1">{{currentNode.nodes.[1].storyLine}}</a>
                         {{else}}
-                            <textarea class = "textarea" name= "textarea1"></textarea>
+                            <textarea class = "textarea" name= "1"></textarea>
                             <input type="submit" value="Submit" id = "submit">
                         {{/if}}
                         </fieldset>
@@ -42,7 +51,7 @@
                             {{#if currentNode.nodes.[2] }}
                             <a class="storyLink" href="{{endpoint}}/2">{{currentNode.nodes.[2].storyLine}}</a>
                         {{else}}
-                            <textarea class = "textarea" name= "textarea2"></textarea>
+                            <textarea class = "textarea" name= "2"></textarea>
                             <input type="submit" value="Submit" id = "submit">
                         {{/if}}
                         </fieldset>
@@ -57,7 +66,7 @@
                             {{#if currentNode.nodes.[3] }}
                             <a class="storyLink" href="{{endpoint}}/3">{{currentNode.nodes.[3].storyLine}}</a>
                         {{else}}
-                            <textarea class = "textarea" name= "textarea3"></textarea>
+                            <textarea class = "textarea" name= "3"></textarea>
                             <input type="submit" value="Submit" id = "submit">
                         {{/if}}
                         </fieldset>
