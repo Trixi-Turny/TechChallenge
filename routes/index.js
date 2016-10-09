@@ -1,11 +1,9 @@
 var express = require('express')
 var router = express.Router()
 var partial = require('express-partial')
-
 var app = express();
 var request = require('request');
 var bodyParser = require('body-parser');
-
 var title = "Trixi Turny - Tech Challenge"
 
 const story = {
@@ -28,9 +26,9 @@ function editNode(node, storyLine) {
     nodes: {}
   };
   else node.storyLine = storyLine;
-
   return node;
 }
+
 router.get('/favicon.ico', function(req, res) {
   res.send('');
 });
@@ -50,7 +48,6 @@ router.get('*', function(req, res, next) {
 
 router.post('*', function(req, res) {
   var noOfTextFields = 4;
-
   const path = req.url.split('/').filter(function(value) {
     return value !== ""
   });
@@ -65,7 +62,6 @@ router.post('*', function(req, res) {
     endpoint: req.url.replace(/\/$/, ''),
     currentNode: currentNode
   });
-
 });
 
 
