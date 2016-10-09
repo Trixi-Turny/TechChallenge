@@ -3,13 +3,13 @@
 
 <a href="/">Back to the start</a>
 {{>table_top}}
-  {{>form0}}
+  {{>form0 name = "0"  url = "/0" condition =currentNode.nodes.[0]  node = currentNode.nodes.[0].storyLine }}
     </th>
       <th class="form_table_head"></th>
       </tr>
       <tr class="form_table_row">
     <th class="form_table_head">
-  {{>form1}}
+  {{>form0 name = "1" url = "/1" condition = currentNode.nodes.[1]  node = currentNode.nodes.[1].storyLine}}
 
     </th>
     <th class="form_table_head">
@@ -17,14 +17,14 @@
     </th>
     <th class="form_table_head">
 
-  {{>form2}}
+  {{>form0 name = "2"  url = "/2" condition =currentNode.nodes.[2]  node = currentNode.nodes.[2].storyLine}}
 
     </th>
       </tr>
       <tr class="form_table_row">
     <th class="form_table_head"></th>
     <th class="form_table_head">
-  {{>form3}}
+  {{>form0 name = "3"  url = "/3" condition = currentNode.nodes.[3] node = currentNode.nodes.[3].storyLine}}
 {{>table_bottom}}
 
 
