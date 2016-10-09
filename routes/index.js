@@ -49,12 +49,13 @@ router.get('*', function(req, res, next) {
 });
 
 router.post('*', function(req, res) {
+  var noOfTextFields = 4;
 
   const path = req.url.split('/').filter(function(value) {
     return value !== ""
   });
   const currentNode = path.length ? traverse(story, path) : story;
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < noOfTextFields; i++) {
     if (req.body["" + i] !== undefined) {
       currentNode.nodes[i] = editNode(currentNode.nodes[i], req.body["" + i]);
     }
